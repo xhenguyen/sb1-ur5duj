@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Freelancer.com Auto-fill",
+  "version": "1.0",
+  "description": "Auto-fill inputs on Freelancer.com",
+  "permissions": ["storage", "activeTab"],
+  "action": {
+    "default_popup": "index.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.freelancer.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
